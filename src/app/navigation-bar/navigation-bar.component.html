@@ -1,0 +1,36 @@
+<div class="background">
+    <div class="container">
+        <div class="row">
+          <div class="two columns mainLinks">
+            <h5 routerLinkActive="active"><a [routerLink]="['/home']" >Home</a></h5>
+          </div>
+          <ul class="four columns offset-by-six">
+            <div *ngIf="authenticated" class="links">
+              <li routerLinkActive="active"><a [routerLink]="['/profile']">profile</a></li>
+              <li routerLinkActive="active"><a (click)="logout()">logout</a></li>
+            </div>
+            <div *ngIf="!authenticated" class="links">
+              <li routerLinkActive="active"><a  [routerLink]="['/login']">log in</a></li>
+              <li routerLinkActive="active"><a  [routerLink]="['/register']">register</a></li>
+            </div>
+          </ul>
+            <!-- <div *ngIf="authenticated">
+              <div class="two columns offset-by-six">
+                  <h5 routerLinkActive="active"><a [routerLink]="['/profile']">profile</a></h5>
+              </div>
+              <div class="two columns">
+                  <h5 routerLinkActive="active"><a (click)="logout()">log out</a></h5>
+              </div>
+            </div>
+            <div *ngIf="!authenticated">
+              <div class="two columns offset-by-six">
+                  <h5 routerLinkActive="active"><a  [routerLink]="['/login']">log in</a></h5>
+              </div>
+              <div class="two columns">
+                  <h5 routerLinkActive="active"><a  [routerLink]="['/register']">register</a></h5>
+              </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+

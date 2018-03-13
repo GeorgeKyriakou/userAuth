@@ -1,0 +1,20 @@
+@import '../../styles.scss';
+
+.links {
+  display: inline-flex;
+  padding-top: 0.5em;
+  li {
+    padding-left: 2em;
+    list-style: none;
+    cursor: pointer;
+    a {
+    text-decoration: none;
+    }
+  }
+}
+
+.background {
+  background-color: #126187;
+  width: 100vw;
+  height: 38px;
+}

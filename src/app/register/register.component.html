@@ -1,0 +1,25 @@
+<form class="container" [formGroup] ="userRegisterForm" (ngSubmit)="register(userRegisterForm.value)">
+<div *ngIf="message.display">
+    <div class="row">
+        <p [ngClass]="message.success? 'successMessage' :'alertMessage'">{{message.text}}</p>
+    </div>
+</div>
+  <div class="row">
+    <div class="four columns offset-by-four">
+      <label for="email">Email Address</label>
+      <input type="text" placeholder="name@example.com" formControlName="email"/>
+
+      <div *ngIf="!userRegisterForm.controls['email'].valid && userRegisterForm.controls['email'].touched">
+          <p class="alertMessage">this field is required</p>
+      </div>
+
+      <label for="password">Password</label>
+      <input type="password" formControlName="password"/>
+
+      <div *ngIf="!userRegisterForm.controls['password'].valid && userRegisterForm.controls['password'].touched">
+          <p class="alertMessage">password must be more than 5 characters</p>
+      </div><br>
+      <input type="submit" class="button-primary" value="register" [disabled]="!userRegisterForm.valid">
+    </div>
+  </div>
+</form>

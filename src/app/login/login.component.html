@@ -1,0 +1,25 @@
+<form class="container" [formGroup] ="logInForm" (ngSubmit)="authenticateUser(logInForm.value)">
+<div *ngIf="!success">
+    <div class="row">
+        <p class='alertMessage'>{{message}}</p>
+    </div>
+</div>
+  <div class="row">
+    <div class="four columns offset-by-four">
+      <label for="email">Email Address</label>
+      <input type="text" placeholder="name@example.com" formControlName="email"/>
+
+      <div *ngIf="!logInForm.controls['email'].valid && logInForm.controls['email'].touched">
+          <p class="alertMessage">this field is required</p>
+      </div>
+
+      <label for="password">Password</label>
+      <input type="password" formControlName="password"/>
+
+      <div *ngIf="!logInForm.controls['password'].valid && logInForm.controls['password'].touched">
+          <p class="alertMessage">this field is required</p>
+      </div><br>
+      <input type="submit" class="button-primary" value="logIn" [disabled]="!logInForm.valid">
+    </div>
+  </div>
+</form>

@@ -1,0 +1,28 @@
+{
+  "name": "userauth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://josephine@bitbucket.org/path/to/repo"
+  },
+  "author": "Angelos Papangelis, Georgios Kyriakou",
+  "license": "MIT",
+  "homepage": "your URL here",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "emailjs": "^1.0.12",
+    "express": "^4.15.4",
+    "jsonwebtoken": "*",
+    "mongoose": "^4.11.12",
+    "passport": "*",
+    "passport-jwt": "*"
+  }
+}

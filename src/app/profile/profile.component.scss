@@ -1,0 +1,25 @@
+@import '../../styles.scss';
+
+profileInfoBox{
+    margin-top: 10px;
+    margin-left: 40%;
+}
+.title {
+    position: absolute;
+    margin-top: -19px;
+    margin-left: 24px;
+    font-size: 1.5em;
+    background-color: white;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.box {
+    border: 1px solid grey;
+    border-radius: 25px;
+    width: 40%;
+    height: auto;
+    ul {
+        list-style: none;
+        padding: 20px;
+    }
+}

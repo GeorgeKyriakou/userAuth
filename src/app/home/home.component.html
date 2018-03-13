@@ -1,0 +1,16 @@
+<div>
+<h1>Something for a title</h1>
+</div>
+<br>
+<div *ngIf="isAuthed; else notAuthed">
+  <div class="three columns offset-by-five">
+    <h4> Upcoming Bookings</h4>
+  </div>
+</div>
+
+<ng-template #notAuthed>
+<div class="four columns offset-by-four">
+  <h5>Please log in to view full calendar</h5>
+</div>
+</ng-template>
+
