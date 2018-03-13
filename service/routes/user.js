@@ -58,8 +58,7 @@ router.post('/login', (req, res, next)=>{
 router.get('/profile', passport.authenticate('jwt', {session:false}) ,(req, res, next)=>{
     const userProfile = {
         "id":req.user._id,
-        "apartmentNumber": req.user.apartmentNumber,
-        "email": req.user.email,
+        "email": req.user.email
     };
     Booking.getOneBooking(userProfile.apartmentNumber, (err, response)=>{
         if (err) {
